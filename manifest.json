@@ -1,0 +1,17 @@
+{
+    "name"    : "Leo Dictionary Widget",
+    "description" : "Select a word and look it up in the LEO dictionary.",
+    "icons" : {
+        "48" : "leo48.png",
+        "128" : "leo128.png"
+    },
+    "version"  : "1.0.7",
+    "content_scripts" : [
+        {
+            "matches" : ["*://*/*"],
+            "js" : ["leodictwidget.js"]
+        }
+    ],
+    "options_page" : "fancy-settings/source/index.html",
+    "background_page" : "background.html"
+}
