@@ -1,5 +1,6 @@
 {
     "name"    : "Leo Dictionary Widget",
+    "manifest_version" : 2,
     "description" : "Select a word and look it up in the LEO dictionary.",
     "icons" : {
         "48" : "leo48.png",
@@ -13,5 +14,8 @@
         }
     ],
     "options_page" : "fancy-settings/source/index.html",
-    "background_page" : "background.html"
+    "background" : {
+                        "page" : "background.html",
+                        "persistent" : false
+                   }
 }

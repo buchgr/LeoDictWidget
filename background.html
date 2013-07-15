@@ -14,22 +14,8 @@ limitations under the License.
 -->
 <html>
     <head>
-
         <script type="text/javascript" src="fancy-settings/source/lib/store.js"></script>
-        <script type="text/javascript">
-        var settings = new Store("settings", {
-            "language": "ende",
-            "shortcutSpecialKey": "alt",
-            "shortcutKey" : "81", // 81 = q
-            "openOnDblClick" : false
-        });
-
-        chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-          if (request.action == 'settings') {
-            sendResponse(settings.toObject());
-          }
-        });
-        </script>
+        <script type="text/javascript" src="background.js"></script>
     </head>
     <body>
     </body>

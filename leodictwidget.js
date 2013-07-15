@@ -127,8 +127,7 @@ var LeoDictWidget = (function () {
     }
 })();
 
-chrome.extension.sendRequest({"action": 'settings'}, function(extensionSettings) {
-    var settings = extensionSettings;
+chrome.runtime.sendMessage({"action": 'settings'}, function(settings) {
     LeoDictWidget.init(settings);
 });
 
