@@ -62,7 +62,6 @@ this.manifest = {
                 ]
             }
         },
-        
         {
             "tab": i18n.get("general"),
             "group": i18n.get("shortcut"),
@@ -97,13 +96,6 @@ this.manifest = {
                 [89, "Y"],
                 [90, "Z"]
             ]
-        },
-        {
-            "tab": i18n.get("general"),
-            "group": i18n.get("dblclick"),
-            "name": "openOnDblClick",
-            "type": "checkbox",
-            "label": i18n.get("open-on-dbl-click")
         },
         {
             "tab": i18n.get("general"),

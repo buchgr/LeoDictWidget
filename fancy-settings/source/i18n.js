@@ -71,16 +71,7 @@ this.i18n = {
     },
     
     "shortcut-description" : {
-        "en" : "You may select any shortcut that is not yet used by your operating system or some different program.",
+        "en" : "You may select any shortcut that's not being used by another program.'",
         "de" : "Sie können jedes noch nicht belegte Tastenkürzel verwenden."
-    },
-    "dblclick" : {
-        "en" : "Doubleclick",
-        "de" : "Doppelklick"
-    },
-    
-    "open-on-dbl-click" : {
-        "en" : "Open the dictionary by double clicking a word. This option disables the shortcut.",
-        "de" : "Das Wörterbuch durch Doppelklick auf ein Wort öffnen. Diese Option deaktiviert das Tastenkürzel."
     }
 };
