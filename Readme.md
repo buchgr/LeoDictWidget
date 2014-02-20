@@ -1,21 +1,10 @@
-The current release can be found in the Google Chrome Webstore:
-https://chrome.google.com/webstore/detail/kepemmpmljphklmpfgfmhpjhpdlccpke
+In the Google Chrome Webstore: https://chrome.google.com/webstore/detail/kepemmpmljphklmpfgfmhpjhpdlccpke
 
 Teaser:
-Select a word and look it up in the LEO dictionary.
+Select a word on a website and immediately look up its translation on http://www.leo.org/!
 
-This extension allows you to select any word or text on a website and to look it up in the LEO dictionary (http://dict.leo.org) by simply pressing a keyboard shortcut or double clicking on the word (disabled by default, can be enabled in the options page).
+This extension allows you to select a word or phrase on a website and to look it up in the LEO dictionary by simply pressing a keyboard shortcut. The dictionary pops up conveniently in the upper right corner inside your browser window. It does not open a new tab or window.
 
-The dictionary then pops up conveniently on the upper right corner inside your browser window. It does not open a new tab or window.
-The dictionary can be hidden by simply pressing the keyboard shortcut again.
+The shortcut defaults to Alt+W, however you can set it to virtually any shortcut in the options page. The language defaults to German - English and can also be configured in the options page.
 
-The shortcut defaults to ALT+Q, however you can set it to virtually any shortcut in the options page.
-
-The language defaults to German - English, but can also be configured in the options page.
-
-If you don't select a word or text, the dictionary will be opened with an empty search field and you can type in your query manually.
-
-** NOTICE **
-The default shortcut ALT+Q was not my smartest choice, since it does not work on Wikipedia. So if you want to use the extension on Wikipedia, I recommend to change the shortcut to something different (e.g. ALT+W). I can't however change the default shortcut, as a lot of people already use it.
-
-If you have any feature request or bug report, please drop me a line at bucjac@gmail.com.
+For feature request and bug reports please contact me at bucjac@gmail.com or send me a pull request at https://github.com/bucjac/LeoDictWidget.
