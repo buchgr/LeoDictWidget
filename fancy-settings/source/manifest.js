@@ -35,6 +35,14 @@ this.manifest = {
                         "value" : "rude",
                         "text" : i18n.get("russian-german")
                     },
+                    {
+                        "value" : "ptde",
+                        "text" : i18n.get("portuguese-german")
+                    },
+                    {
+                        "value" : "plde",
+                        "text" : i18n.get("polish-german")
+                    }
                 ]
             }
         },

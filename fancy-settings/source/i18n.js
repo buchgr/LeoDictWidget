@@ -40,9 +40,19 @@ this.i18n = {
         "de" : "Russisch - Deutsch"
     },
     
+    "portuguese-german" : {
+        "en" : "Portuguese - German",
+        "de" : "Portugiesisch - Deutsch"
+    },
+
+    "polish-german" : {
+        "en" : "Polish - German",
+        "de" : "Polnisch - Deutsch"
+    },
+
     "shortcut" : {
         "en" : "Shortcut",
-        "de" : "Tastaturkürzel"
+        "de" : "Tastenkürzel"
     },
     
     "special-key" : {
