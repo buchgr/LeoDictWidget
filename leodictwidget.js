@@ -14,7 +14,6 @@ limitations under the License.
 */
 
 var LeoDictWidget = (function () {
-
     const DISPLAY_STATUS_HIDDEN = "hidden";
     const DISPLAY_STATUS_VISIBLE = "visible";
 
@@ -26,19 +25,20 @@ var LeoDictWidget = (function () {
     function buildUrl (language, query) {
         sessionStorage["query"] = query;
     
-        var host = "http://pda.leo.org/" + language;
-        return query.length > 1 ? host + "?search="+query
-                                                   : host;
+        var url = "http://pda.leo.org/" + language + "/";
+        if (query.length > 1)
+            url += "#search=" + query
+        return url;
     }
 
     function paintDictionaryWidget (url) {
-        if (sessionStorage["displayStatus"] == DISPLAY_STATUS_VISIBLE 
+        if (sessionStorage["displayStatus"] == DISPLAY_STATUS_VISIBLE
             && document.getElementById("leoDictionaryFrame")) {
             document.getElementById("leoDictionaryFrame").src = url;
         } else {
             var html = "<div id='leoDictionary' ";
-            html += "style='position:fixed; right:10px; top:10px; width:325px; height:525px; border:0; z-index:1000001; box-shadow: -5px 5px 5px #CCC;'>";
-            html += "<iframe id='leoDictionaryFrame' style='width:325px; height:525px; border:0;' src='"+url+"'></iframe>";
+            html += "style='position:fixed; right:10px; top:10px; width:340px; height:525px; border:0; z-index:2147483647; box-shadow: -5px 5px 5px #CCC;'>";
+            html += "<iframe id='leoDictionaryFrame' style='width:340px; height:525px; border:0;' src='"+url+"'></iframe>";
             html += "</div>";
                                
             document.body.innerHTML += html;
@@ -130,4 +130,3 @@ var LeoDictWidget = (function () {
 chrome.runtime.sendMessage({"action": 'settings'}, function(settings) {
     LeoDictWidget.init(settings);
 });
-
