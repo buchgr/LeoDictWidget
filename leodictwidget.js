@@ -37,14 +37,17 @@ var LeoDictWidget = (function () {
     }
 
     function show(url) {
-        var html = "<div id='__$$leodictwidget$$__' ";
-        html += "style='position:fixed; right:10px; top:10px; width:340px; height:520px; border:0; z-index:2147483647; box-shadow: -5px 5px 5px #CCC;'>";
-        html += "<div style='width:100%; height: 20px; background-color:rgb(66, 185, 66); text-align:center; font-size:12px; padding-top:4px; cursor: default; ";
+        var tmpwidget = document.createElement('div');
+        tmpwidget.setAttribute('id', '__$$leodictwidget$$__');
+        tmpwidget.setAttribute('style', 'position:fixed; right:10px; top:10px; width:340px; height:520px; border:0; z-index:2147483647; box-shadow: -5px 5px 5px #CCC;');
+        
+        var html = "<div style='width:100%; height: 20px; background-color:rgb(66, 185, 66); text-align:center; font-size:12px; padding-top:4px; cursor: default; ";
         html += "-webkit-touch-callout: none; -webkit-user-select: none; user-select: none; font-family: Arial, Verdana, sans-serif; color: black;'>Press here to move widget.</div>";
         html += "<iframe style='width:100%; height:500px; border:0;' src='" + url + "'></iframe>";
         html += "</div>";
-            
-        document.body.innerHTML += html;
+        tmpwidget.innerHTML = html;
+
+        document.body.appendChild(tmpwidget);
 
         var dragborder = widget().childNodes[0];
         dragborder.addEventListener("mousedown", initWidgetMove, false);
