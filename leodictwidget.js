@@ -66,8 +66,6 @@ var LeoDictWidget = (function () {
             }, false);
             
             window.addEventListener("keydown", function (e) {
-                e.preventDefault();
-
                 specialKeyPressed = false;
                 switch (settings.shortcutSpecialKey) {
                     case "alt":
