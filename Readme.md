@@ -3,6 +3,22 @@ This extension allows you to select a word or phrase on a website and to look it
 
 The shortcut defaults to Alt+W, however you can set it to virtually any shortcut in the options page. The language defaults to German - English and can also be configured in the options page.
 
-For feature requests and bug reports please contact me at bucjac@gmail.com or send me a pull request at https://github.com/bucjac/LeoDictWidget.
+Available languages are: 
+English ⇔ German	
+French ⇔ German
+Spanish ⇔ German
+Italian ⇔ German
+Chinese ⇔ German
+Russian ⇔ German
+Portuguese ⇔ German
+Polish ⇔ German
+
+For feature requests and bug reports please contact me at bucjac@gmail.com.
+
+** NOTICE **
+For existing users the shortcut changed from Alt+Q to Alt+W. I am sorry if this caused you any inconvenience, however it was necessary as the old shortcut caused a lot of trouble for some users.
+
+** NEW IN VERSION 2.0.2 **
+- Now also works with Facebook and GMail
 
 In the Google Chrome Webstore: https://chrome.google.com/webstore/detail/kepemmpmljphklmpfgfmhpjhpdlccpke
