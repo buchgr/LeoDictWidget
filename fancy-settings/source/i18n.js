@@ -80,6 +80,11 @@ this.i18n = {
         "de" : "Strg"
     },
     
+    "cmd-key" : {
+        "en" : "Command Key (Mac)",
+        "de" : "Befehlstaste (Mac)"
+    },
+
     "shortcut-description" : {
         "en" : "You may select any shortcut that's not being used by another program.'",
         "de" : "Sie können jedes noch nicht belegte Tastenkürzel verwenden."

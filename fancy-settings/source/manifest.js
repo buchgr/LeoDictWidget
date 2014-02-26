@@ -67,6 +67,10 @@ this.manifest = {
                         "value" : "ctrl",
                         "text" : i18n.get("ctrl-key")
                     },
+                    {
+                        "value" : "cmd-key",
+                        "text" : i18n.get("cmd-key")
+                    }
                 ]
             }
         },

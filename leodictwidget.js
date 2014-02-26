@@ -80,6 +80,10 @@ var LeoDictWidget = (function () {
                     case "ctrl":
                         specialKeyPressed = e.ctrlKey;
                         break;
+                    // For Mac users
+                    case "cmd-key":
+                        specialKeyPressed = e.metaKey && navigator.platform.toUpperCase().indexOf('MAC') != -1;
+                        break;
                 }
                     
                 if (specialKeyPressed && e.keyCode == settings.shortcutKey) {

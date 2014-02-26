@@ -6,7 +6,7 @@
         "48" : "leo48.png",
         "128" : "leo128.png"
     },
-    "version"  : "2.0.3",
+    "version"  : "2.0.4",
     "content_scripts" : [
         {
             "matches" : ["*://*/*"],
