@@ -24,4 +24,7 @@ For existing users the shortcut changed from Alt+Q to Alt+W. I am sorry if this 
 ** NEW IN VERSION 2.0.4 **
 - Apple Mac users can now use the command key as a part of their shortcut
 
+** NEW IN VERSION 2.1 **
+- Open the dictionary by selecting a word and right click.
+
 In the Google Chrome Webstore: https://chrome.google.com/webstore/detail/kepemmpmljphklmpfgfmhpjhpdlccpke
