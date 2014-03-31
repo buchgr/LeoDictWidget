@@ -12,11 +12,12 @@ var LeoDictWidget = (function () {
         return document.getElementById("__$$leodictwidget$$__");
     }
 
-    function hide() {
-        if (widget()) {
-            var dragborder = widget().childNodes[0];
-            dragborder.removeEventListener("mousedown", initWidgetMove, false);
+    function hide(e) {
+        if (e != null) {
+            e.preventDefault();
+        }
 
+        if (widget()) {
             widget().parentNode.removeChild(widget());
         }
     }
@@ -41,8 +42,10 @@ var LeoDictWidget = (function () {
         tmpwidget.setAttribute('id', '__$$leodictwidget$$__');
         tmpwidget.setAttribute('style', 'position:fixed; right:10px; top:10px; width:340px; height:520px; border:0; z-index:2147483647; box-shadow: -5px 5px 5px #CCC;');
         
-        var html = "<div style='width:100%; height: 20px; background-color:rgb(66, 185, 66); text-align:right; font-size:12px; padding-top:4px; cursor: pointer; ";
-        html += "-webkit-touch-callout: none; -webkit-user-select: none; user-select: none; font-family: Arial, Verdana, sans-serif; color: black;'>[X]</div>";
+        var html = "<div style='width:100%; height: 20px; background-color:rgb(66, 185, 66); text-align:right; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none;";
+        html += "user-select: none; font-family: Arial, Verdana, sans-serif;padding:0;'>";
+        html += "<div style='float:right; background:#605F61; display:block; height:100%; padding: 0 3px; margin:0;line-height:0px;text-align:center;'>";
+        html += "<a style='text-decoration:none;color:#fff; display:block; font-size:25px; font-weight:bold; margin-top:8px;' href='#'>x</a></div></div>";
         html += "<iframe style='width:100%; height:500px; border:0;' src='" + url + "'></iframe>";
         html += "</div>";
         tmpwidget.innerHTML = html;
@@ -51,6 +54,9 @@ var LeoDictWidget = (function () {
 
         var dragborder = widget().childNodes[0];
         dragborder.addEventListener("mousedown", initWidgetMove, false);
+
+        var hidebtn = widget().getElementsByTagName("a")[0];
+        hidebtn.addEventListener("click", hide, false);
     }
 
     return {
@@ -88,9 +94,9 @@ var LeoDictWidget = (function () {
                 }
                     
                 if (specialKeyPressed && e.keyCode == settings.shortcutKey) {
-                    if (widget())
+                    if (widget()) {
                         hide();
-                    else {
+                    } else {
                         var query = window.getSelection().toString().trim();
                         show(buildUrl(settings.language, query))
                     }
