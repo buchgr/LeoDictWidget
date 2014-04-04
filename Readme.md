@@ -28,3 +28,10 @@ For existing users the shortcut changed from Alt+Q to Alt+W. I am sorry if this 
 - Open the dictionary by selecting a word and right click.
 
 In the Google Chrome Webstore: https://chrome.google.com/webstore/detail/kepemmpmljphklmpfgfmhpjhpdlccpke
+
+# Build
+In order to build the TypeScript files execute the following:
+```
+tsc --out leodictwidget.js leodictwidget.ts contentscript_main.ts
+tsc background.ts
+```
