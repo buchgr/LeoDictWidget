@@ -71,7 +71,7 @@ module org.leo.dict {
             if (typeof e !== "undefined") {
                 e.preventDefault();
             }
-            
+
             if (this.widget()) {
                 this.widget().parentNode.removeChild(this.widget());
             }
