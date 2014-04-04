@@ -6,26 +6,30 @@ module org.leo.dict {
     }
 
     export class Widget {
-        private moving: boolean;
         private offX: number;
         private offY: number;
-
+        /// stores a reference to the bound widgetMove function
+        /// that was registered with the mousemove event.
+        /// This is a hack in order to be able to remove the event
+        /// listener again, because fnt.bound(this) != fnt.bound(this)
+        private boundMoveObject: any;
         private settings: Settings;
 
         constructor(settings: Settings, private widgetID: string = "__$$leodictwidget$$__") {
-            this.moving = false;
             this.settings = settings;
-            
+            this.boundMoveObject = null;
+
             window.addEventListener("mouseup", (e: MouseEvent) => {
                 if (this.widget()) {
-                    if (this.moving) {
-                        window.removeEventListener("mousemove", this.widgetMove.bind(this), true);
-                        this.moving = false;
+                    if (this.boundMoveObject) {
+                        window.removeEventListener("mousemove", this.boundMoveObject, true);
+                        this.boundMoveObject = null;
                     }
 
                     var query = window.getSelection().toString().trim();
-                    if (query.length > 1)
+                    if (query.length > 1) {
                         (<HTMLIFrameElement>(this.widget().childNodes[1])).src = this.buildUrl(query);
+                    }
                 }
             }, false);
 
@@ -74,16 +78,18 @@ module org.leo.dict {
         }
 
         private initWidgetMove(e: MouseEvent): void {
-            this.moving = true;
             this.offX = e.clientX - this.widget().offsetLeft;
             this.offY = e.clientY - this.widget().offsetTop;
 
-            window.addEventListener("mousemove", (e: MouseEvent) => { this.widgetMove(e); }, true);
+            this.boundMoveObject = this.widgetMove.bind(this);
+            window.addEventListener("mousemove", this.boundMoveObject, true);
         }
 
         private widgetMove(e: MouseEvent): void {
-            this.widget().style.left = (e.clientX - this.offX) + "px";
-            this.widget().style.top = (e.clientY - this.offY) + "px";
+            if (this.widget()) {
+                this.widget().style.left = (e.clientX - this.offX) + "px";
+                this.widget().style.top = (e.clientY - this.offY) + "px";
+            }
         }
 
         public buildUrl(query: string): string {
@@ -116,7 +122,7 @@ module org.leo.dict {
             dragborder.addEventListener("mousedown", this.initWidgetMove.bind(this), false);
 
             var hidebtn = this.widget().getElementsByTagName("a")[0];
-            hidebtn.addEventListener("click", (e: MouseEvent) => { this.hide(e); }, false);
+            hidebtn.addEventListener("click", this.hide.bind(this), false);
         }
     }
 }
