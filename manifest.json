@@ -7,7 +7,7 @@
         "48" : "leo48.png",
         "128" : "leo128.png"
     },
-    "version"  : "2.1",
+    "version"  : "2.2",
     "options_page" : "fancy-settings/source/index.html",
     "background" : {
         "scripts" : ["fancy-settings/source/lib/store.js", "background.js"]
