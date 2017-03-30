@@ -95,7 +95,7 @@ module org.leo.dict {
         public buildUrl(query: string): string {
             var url = "https://pda.leo.org/" + this.settings.language + "/";
             if (query.length > 1)
-                url += "#search=" + encodeURIComponent(query);
+                url += encodeURIComponent(query);
             return url;
         }
 

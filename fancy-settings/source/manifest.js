@@ -12,35 +12,35 @@ this.manifest = {
             "options" : {
                 "values" : [
                     {
-                        "value" : "ende",
+                        "value" : "englisch-deutsch",
                         "text" : i18n.get("english-german")
                     },
                     {
-                        "value" : "frde",
+                        "value" : "französisch-deutsch",
                         "text" : i18n.get("french-german")
                     },
                     {
-                        "value" : "esde",
+                        "value" : "spanisch-deutsch",
                         "text" : i18n.get("spanish-german")
                     },
                     {
-                        "value" : "itde",
+                        "value" : "italienisch-deutsch",
                         "text" : i18n.get("italian-german")
                     },
                     {
-                        "value" : "chde",
+                        "value" : "chinesisch-deutsch",
                         "text" : i18n.get("chinese-german")
                     },
                     {
-                        "value" : "rude",
+                        "value" : "russisch-deutsch",
                         "text" : i18n.get("russian-german")
                     },
                     {
-                        "value" : "ptde",
+                        "value" : "portugiesisch-deutsch",
                         "text" : i18n.get("portuguese-german")
                     },
                     {
-                        "value" : "plde",
+                        "value" : "polnisch-deutsch",
                         "text" : i18n.get("polish-german")
                     }
                 ]
