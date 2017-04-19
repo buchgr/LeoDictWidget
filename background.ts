@@ -2,7 +2,7 @@ var Store: any;
 var chrome: any;
 
 var settings = new Store("settings", {
-    "language": "ende",
+    "language": "englisch-deutsch",
     "shortcutSpecialKey": "alt",
     "shortcutKey": "87" // 87 = W
 }).toObject();
